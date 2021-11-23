@@ -1,4 +1,4 @@
-//String
+п»ї//String
 #pragma warning(disable:4326)
 #include<iostream>
 using namespace std;
@@ -13,8 +13,8 @@ String operator+(const String& left, const String& right);
 
 class String
 {
-	int size; //размер строки в байтах
-	char* str; //Адрес строки в динамической памяти
+	int size; //СЂР°Р·РјРµСЂ СЃС‚СЂРѕРєРё РІ Р±Р°Р№С‚Р°С…
+	char* str; //РђРґСЂРµСЃ СЃС‚СЂРѕРєРё РІ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё
 public:
 	int get_size()const
 	{
@@ -55,9 +55,9 @@ public:
 	}
 	String(String&& other)
 	{
-		//Shallow copy - поверхностное копирование
-		//Конструктор переноса не должен работать так,
-		//как НЕ должен работать конструктор копирования
+		//Shallow copy - РїРѕРІРµСЂС…РЅРѕСЃС‚РЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ
+		//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРµСЂРµРЅРѕСЃР° РЅРµ РґРѕР»Р¶РµРЅ СЂР°Р±РѕС‚Р°С‚СЊ С‚Р°Рє,
+		//РєР°Рє РќР• РґРѕР»Р¶РµРЅ СЂР°Р±РѕС‚Р°С‚СЊ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 		this->size = other.size;
 		this->str = other.str;
 		cout << "MoveConstructoe:\t" << this << endl;
@@ -79,8 +79,8 @@ public:
 		this->str = new char[size] {};
 		for (int i = 0; i < size; i++)this->str[i] = other.str[i];
 		cout << "CopyAssigment:\t\t" << this << endl;
-		//Assigment - Присваивание
-		//Assign - Присвоить
+		//Assigment - РџСЂРёСЃРІР°РёРІР°РЅРёРµ
+		//Assign - РџСЂРёСЃРІРѕРёС‚СЊ
 		return *this;
 	}
 	String& operator=(String&& other)
@@ -146,7 +146,7 @@ void main()
 	cout << str2 << endl;
 
 	String str3;
-	str3 = str2; //Shallow copy - поверхностное копирование
+	str3 = str2; //Shallow copy - РїРѕРІРµСЂС…РЅРѕСЃС‚РЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ
 	cout << str3 << endl;
 #endif // CONSTRUCTOR_CHECK
 
